@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            color: red;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            transition: width 1s;
+        }
+        /* .wrapper:hover{
+            width: 100%;
+        } */
+        .active{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        yuki
+    </div>
+    <script>
+        var test=document.getElementById('wrapper')
+        var isActive=false
+        // console.log(test)
+        test.addEventListener('click',function(){
+            // test.style.width='300px'
+            isActive=!isActive
+            if(isActive==true)
+            {
+                test.classList.add('active');
+            }else{
+                test.classList.remove('active')
+            }
+            })
+    </script>
+</body>
+</html>
