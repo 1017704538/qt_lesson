@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+    <style>
+        .good{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{massage}}
+        <!-- <p class="cool" v-bind:class="isGood ? 'good' : ''" v-on:click="good">Yuki</p> -->
+        <p class="cool" :class="[activeClass]">YukiKzae</p>
+    </div>
+    <ul>
+        <li v-for="arr in arrs"></li>
+    </ul>
+    <input type="text" v-model="content">
+    <p></p>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data: {
+                massage:'hello',
+                isGood:false,
+                activeClass:'active',
+                arrs:[
+                    {text:'hello world'},
+                    {text:'hello html'},
+                    {text:'hello css'},
+                    {text:'hello js'},
+                ],
+                content:"input"
+            },
+            methods:{
+                good() {
+                    this.isGood = !this.isGood
+                }
+            }
+        })
+    </script>
+</body>
+</html>
