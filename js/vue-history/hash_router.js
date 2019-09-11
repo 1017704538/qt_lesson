@@ -11,7 +11,7 @@ class HashRouter{
     }
     // 404
     registerNotFound(callback = function() {}) {
-      this.routers['404'] = callback
+      this.routers['404'] = callback;
     }
   
     registerError(callback = function() {}) {
@@ -27,6 +27,7 @@ class HashRouter{
       
       // handler();
       //仅限于对象自身的属性， 而不去查找原型链上的属性
+    //   hasOwnProperty()方法返回一个布尔值，判断对象是否包含特定的自身（非继承）属性。
       if (!this.routers.hasOwnProperty(hash)) {
         handler = this.routers['404'];
       } else {

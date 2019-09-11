@@ -70,7 +70,7 @@
 
   function init() {
     for (let i = 0; i < initRoundPopulation; i++) {
-      //流程式 抽离
+      //流程式 抽离 渐变效果
       round[i] = new RoundItem(i, Math.random()*WIDTH, Math.random()*HEIGHT, ctx);
       round[i].draw();
     }
