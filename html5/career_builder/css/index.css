@@ -36,6 +36,7 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
     z-index: 3;
 }
 .footer{
+    margin-top: 825px;
     text-align: center;
     font-size: 10px;
 }
@@ -132,7 +133,9 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
     padding: 7px 0 56px 0;
 }
 .footer{
-        clear: both;
+    /* position: fixed; */
+    clear: both;
+    bottom: 0;
 }
 .about{
     padding: 0;
@@ -165,30 +168,239 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
-    width: 250px;
-    font-size: 10px;
+    width: 350px;
+    font-size: 12px;
+    font-weight: 100;
     text-align: center;
     line-height: 16px;
     color: #ccc 
 }
 .middle{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 800px;
+    position: relative;
+    width: 100%;
     height: 300px;
 }
 .left{
     display: inline-block;
-    width: 200px;
+    width: 100px;
+    height: 100%;
 }
 .right{
     display: inline-block;
-    width: 200px;
+    width: 100px;
 }
 .image{
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex: 1;
     display: inline-block;
-    width: 400px;
+    width: 650px;
     height: 300px;
     background: url(../images/bb3.jpg);
+}
+.left-title{
+    position: absolute;
+    left: 7%;
+    width: 200px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 10px;
+}
+.explore{
+    position: absolute;
+    left: 10%;
+    z-index: 1;
+    width: 350px;
+    height: 200px;
+    top: 30%;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.left-text{
+    padding: 10px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.EXOLORE{
+    border: none;
+    text-align: center;
+    color: #cccccc;
+    font-size: 12px;
+    background-color: black;
+    width: 102px;
+    height: 46px;
+}
+.explore-button{
+    padding: 20px;
+}
+.Students,.Faculty{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    border: 1px solid #07cbc9;
+}
+.Students{
+    top: 0;
+    right: 10%;
+}
+.Faculty{
+    top: 45%;
+    right: 10%;
+}
+.number{
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.content{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.bottom{
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+}
+.top_content,.bottom_content{
+    display: flex;
+    height: 300px;
+}
+.img_library,.content_library,.img_lab,.content_lab,.content_hall,.img_hall,.content_ground,.img_ground {
+    flex: 1;
+}
+.img_library{
+    background: url(../images/b1.jpg);
+}
+.img_lab{
+    background: url(../images/b2.jpg);
+}
+.img_hall{
+    background: url(../images/b3.jpg);
+}
+.img_ground{
+    background: url(../images/b4.jpg);
+}
+.content_library,.content_lab,.content_hall,.content_ground{
+    position: relative;
+    background-color: #07cbc9;
+}
+/* .content_library ::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 20px solid;
+    position: absolute;
+    left: -140px;
+    top: -100px;
+    transform: rotate(90deg);
+    border-color:  #07cbc9 transparent transparent;
+} */
+.content_lab ::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 20px solid;
+    position: absolute;
+    left: -140px;
+    top: -100px;
+    transform: rotate(90deg);
+    border-color:  #07cbc9 transparent transparent;
+}
+.bottom button{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.gallery {
+    position: absolute;
+    margin-top: 300px;
+    width: 100%;
+    height: 600px;
+}
+.img_show {
+    margin-top: 100px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 650px;
+    height: 325px;
+    padding: 20px;
+}
+.ablum {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+}
+.ablum img{
+    width: 200px;
+    height: 150px;
+}
+.img_name {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background-color: black;
+    bottom: 0;
+    color: #ccc;
+    font-size: 10px;
+}
+.img_name span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+.scince {
+    position: absolute;
+    left: 20px;
+}
+.indoor {
+    position: absolute;
+    left: 245px;
+}
+.transport {
+    position: absolute;
+    right:20px;
+}
+.room{
+    position: absolute;
+    bottom: 20px;
+}
+.class {
+    position: absolute;
+    bottom: 20px;
+    left: 245px;
+}
+.ground {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.EXOLORE:hover {
+    background-color: transparent;
+    border: 1px solid black;
+}
+.content_library,.content_hall,.content_ground{
+    padding: 10px
+}
+.text_title{
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 20px
+}
+.introduction {
+    margin: 20px 20px 20px 20px;
+    color: #ffffff;
+    font-size: 12px;
+}
+.context {
+    margin: 40px 20px 20px 20px;
+    color: #ccc;
+    font-size: 10px;
 }
