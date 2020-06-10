@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "vant-card":"../../miniprogram_npm/vant-weapp/card/index"
-  },
-  "enablePullDownRefresh":true
-}

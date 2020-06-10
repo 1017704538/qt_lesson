@@ -1,1 +1,0 @@
-https://chenyubo.me/vue-eleme-app/dist/index.html#/ratings
