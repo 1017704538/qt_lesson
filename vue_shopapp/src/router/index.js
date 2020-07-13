@@ -6,6 +6,7 @@ import Welcome from '../components/Welcome.vue'
 import Users from '../components/user/Users.vue'
 import Rights from '../components/power/Rights.vue'
 import Roles from '../components/power/Roles.vue'
+import Cate from '../components/goods/Cate.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -39,6 +40,10 @@ Vue.use(VueRouter)
     {
       path: '/roles',
       component: Roles
+    },
+    {
+      path: '/categories',
+      component: Cate
     }
   ]
   }
@@ -59,5 +64,10 @@ router.beforeEach((to, from, next) => {
   if(!tokenStr) return next('/login')
   next()
 })
+
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 export default router
